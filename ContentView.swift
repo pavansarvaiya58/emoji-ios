@@ -7,10 +7,15 @@
 
 import SwiftUI
 
+enum Emoji: String {
+    case first = "☺️", second = "⚽️", third = "🚀", fourth = "🤝"
+}
+
 struct ContentView: View {
+    var selection: Emoji = .third
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text(selection.rawValue)
     }
 }
 
